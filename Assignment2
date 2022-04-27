@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Button</title>
+</head>
+<body style="display: flex; justify-content: center;">
+    <button style="background-color: darkorange; border-color: grey; border-width: 1px; display: flex; align-items: center; padding-right: 0px;">
+       <span style="font-weight: bold; font-size: 9px;">Delete</span> 
+       <span style="background-color:white; border-radius: 50%; margin: 4px; padding: 8px; display: flex;align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="12" height="12"
+        viewBox="0 0 50 50"
+        style=" fill:#000000;"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"></path></svg></span>
+    </button>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Circle</title>
+    <style>
+    .body{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }    
+    .circle {
+        height: 150px;
+        width: 150px;
+        background-color: #555;
+        border-radius: 50%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin-top: -75px;
+        margin-left: -75px;
+        background: linear-gradient(45deg, #6eb3dc 30%, #f69fdd 70%);
+        animation-name: rotate;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes rotate{
+         from{ transform: rotate(-360deg); }
+         to{ transform: rotate(360deg); }
+      }
+    </style>
+</head>
+<body class="body">
+    <div class="circle"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <style>
+        .body{
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        .H1{
+            background-color: #3574b4;
+            width: 100%;
+            height: 50px;
+            color: white;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 100;
+            font-size: large;
+            margin-top: 0px;
+        }
+        .text-align{
+            margin-left: 10%;
+        }
+        .div{
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .p1{
+            font-weight: 600;
+            font-size: 21px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .textarea{
+            width: 40%;
+            resize: none;
+            background-color: #e9eaeb;
+            color: #a2a1a1;
+            font-weight: 300;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-top: 20px;
+            padding-left: 15px;
+            width: 100%;
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+            border-top-right-radius: 4px ;
+            border-top-left-radius: 4px ;
+        }
+        .addButton{
+            width: 100%;
+            height: 50px;
+            background-color: #3574b4;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-weight: lighter;
+            padding: 0px;
+        }
+        .parent{
+            height: 600px;
+            width: 100%;
+            top: 50%;
+            margin-top: 20px;
+            border-top-right-radius: 25px ;
+            border-top-left-radius: 25px ;
+            background-color: #3574b4;
+        }
+        .h2{
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 100;
+            padding-top: 30px;
+            padding-left: 40px;
+        }
+        .child{
+            background-color: #aacdea;
+            height: 600px;
+            width: 100%;
+            top: 50%;
+            border-top-right-radius: 25px ;
+            border-top-left-radius: 25px ;
+        }
+        .text{
+            padding-top: 200px;
+        }
+        .text2{
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+            overflow: auto;
+         }
+    </style>
+</head>
+<body class="body">
+    <H1 class="H1">
+        <div class="text-align">Task Management > Home</div>
+    </H1>
+    <div class="div">
+        <p class="p1">Add a new Task</p>
+        <textarea class="textarea" name="Title"  placeholder="Title"></textarea>
+        <textarea class="textarea" name="Description" rows="10" placeholder="Description"></textarea>
+        <button class="addButton"> 
+            <i class="fa fa-plus" style="color: black; padding: 1rem"></i>
+            Add</button>
+    </div>
+    <div class="parent">
+        <H2 class="h2">Tasks</H2>
+        <div class="child">
+            <div class="text">
+                <p class="text2">You having nothing to do.</p>
+                <p class="text2">Go get some sleep.</p>
+            </div>
+            
+        </div>
+    </div>
+   
+</body>
+</html>
